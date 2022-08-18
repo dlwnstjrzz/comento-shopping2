@@ -23,5 +23,8 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Execute deploy.
-        run: npm run deploy
+        run: |
+            git config --global user.email "qny123@naver.com"
+            git config --global user.name "Jimmy neutron"
+            npm run deploy
           
