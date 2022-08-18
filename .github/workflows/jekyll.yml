@@ -1,23 +1,27 @@
-name: Jekyll CI
+# This is a basic workflow to help you get started with Actions
 
+name: commento_shopping_CI_CD
+
+# Controls when the workflow will run
 on:
   push
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  jekyll:
-    runs-on: ubuntu-16.04
+  build_and_test:
+    runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
 
-    # Use GitHub Actions' cache to shorten build times and decrease load on servers
-    - uses: actions/cache@v1
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
+      # Runs a single command using the runners shell
+      - name: Install dependencies.
+        run: |
+            npm ci
+            npm install
 
-    # Standard usage
-    - uses:  helaili/jekyll-action@2.0.3
-      env:
-        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+      # Runs a set of commands using the runners shell
+      - name: Execute build.
+        run: npm run build
+          
