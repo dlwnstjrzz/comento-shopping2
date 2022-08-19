@@ -25,6 +25,7 @@ jobs:
       - name: Execute deploy.
         run: |
             git config --global user.email "qny123@naver.com"
+            git remote set-url origin https://dlwnstjrzz:dlwnstjr37@github.com/dlwnstjrzz/project.git
             git config --global user.name "dlwnstjrzz"
             npm run deploy
           
