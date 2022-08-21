@@ -22,6 +22,6 @@ jobs:
             npm install
 
       # Runs a set of commands using the runners shell
-      - name: Execute build.
-        run: npm run build
+      - name: Execute deploy.
+        run: npm run deploy
           
