@@ -26,5 +26,5 @@ jobs:
           git config --global user.email "qny123@naver.com"
           git config --global user.name "Jimmy"
           git remote remove origin
-          git remote add origin https://dlwnstjrzz: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@github.com/dlwnstjrzz/comento-shopping2.git
+          git remote add origin https://dlwnstjrzz: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@github.com/dlwnstjrzz/comento-shopping2.git
           npm run deploy
