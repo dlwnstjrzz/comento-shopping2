@@ -25,4 +25,5 @@ jobs:
         run: |
           git config --global user.email "qny123@naver.com"
           git config --global user.name "Jimmy"
+          git remote add origin https://dlwnstjrzz:dlwnstjr37@github.com/dlwnstjrzz/comento-shopping2.git
           npm run deploy
