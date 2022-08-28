@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import { Header } from "components/Header";
 import { ItemList } from "components/ItemList";
+import { HashTagItemsContext } from "context/HashTagProvider";
 
 function Home() {
   return (
-    <HomeWrapper>
-      <Header />
-      <ItemList />
-    </HomeWrapper>
+    <HashTagItemsContext>
+      <HomeWrapper>
+        <Header />
+        <ItemList />
+      </HomeWrapper>
+    </HashTagItemsContext>
   );
 }
 

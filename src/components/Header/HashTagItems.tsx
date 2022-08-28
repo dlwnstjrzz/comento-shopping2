@@ -1,13 +1,19 @@
 import styled from "styled-components";
 import { HashTagItem } from "./HashTagItem";
+import { useContext } from "react";
+import { HashTagItemsContextStore } from "context/HashTagProvider";
 
 const HashTags = ["#겨울 방한템", "#따순머그컵"];
 
 export function HashTagItems() {
+  const { setHashTagTitle } = useContext(HashTagItemsContextStore);
+  const onClickTag = (title: string) => {
+    setHashTagTitle(title);
+  };
   return (
     <HashTagItemWrapper>
       {HashTags.map((el) => {
-        return <HashTagItem title={el} />;
+        return <HashTagItem onClick={() => onClickTag(el)} title={el} />;
       })}
     </HashTagItemWrapper>
   );
