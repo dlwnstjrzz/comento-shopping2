@@ -10,10 +10,11 @@ const CreatedGlobalStyle = createGlobalStyle`
 }
 
 body {
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans CJK KR';
   width: 100%;
   height: 100%;
   background: ${({ theme: { colors } }) => colors.grey};
+  font-style: normal;
 }
 
 h1 {
