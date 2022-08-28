@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { HashTagItem } from "./HashTagItem";
 
-const HashTags = ["#겨울 방한템", "#따순머그컵", "#나를 위한 선물"];
+const HashTags = ["#겨울 방한템", "#따순머그컵"];
 
 export function HashTagItems() {
   return (
