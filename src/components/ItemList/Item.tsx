@@ -4,10 +4,12 @@ type ItemProps = {
   imgUrl: string;
   description: string;
   title: string;
+  onClick: (e: React.MouseEvent<HTMLElement>) => void;
 };
-export function Item({ imgUrl, description, title }: ItemProps) {
+
+export function Item({ imgUrl, description, title, onClick }: ItemProps) {
   return (
-    <ItemWrapper>
+    <ItemWrapper onClick={onClick}>
       <ImgWrapper>
         <ItemImg src={imgUrl} />
       </ImgWrapper>
@@ -23,6 +25,7 @@ const ItemWrapper = styled.div`
   flex-direction: column;
   margin: auto;
   margin-top: 40px;
+  cursor: pointer;
 `;
 
 const ImgWrapper = styled.div`
