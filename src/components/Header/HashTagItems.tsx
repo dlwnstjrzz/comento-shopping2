@@ -12,8 +12,8 @@ export function HashTagItems() {
   };
   return (
     <HashTagItemWrapper>
-      {HashTags.map((el) => {
-        return <HashTagItem onClick={() => onClickTag(el)} title={el} />;
+      {HashTags.map((el, idx) => {
+        return <HashTagItem key={idx} onClick={() => onClickTag(el)} title={el} />;
       })}
     </HashTagItemWrapper>
   );
