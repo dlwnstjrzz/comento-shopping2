@@ -16,7 +16,7 @@ function Home() {
 
 const HomeWrapper = styled.div`
   width: 390px;
-  height: 1322px;
+  // height: 1322px;
   background: ${({ theme: { colors } }) => colors.white};
   margin: auto;
 `;
