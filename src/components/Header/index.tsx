@@ -4,7 +4,7 @@ import { HashTagItems } from "./HashTagItems";
 export function Header() {
   return (
     <div>
-      <LogoBar />
+      <LogoBar hasBack={false} />
       <HashTagItems />
     </div>
   );

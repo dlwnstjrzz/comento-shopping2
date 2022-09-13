@@ -12,7 +12,7 @@ function moneyToWon(money: number) {
     }
   }
 
-  return `￦${newArr.join("")}`;
+  return `${newArr.join("")}원`;
 }
 
 interface IitemsInfo {
